@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app" aria-labelledby="app-title">
+        <h1 id="app-title">Todo List</h1>
+
+        <form id="todo-form" autocomplete="off" aria-label="Add a new todo">
+            <label for="todo-input" class="visually-hidden">New todo</label>
+            <input id="todo-input" name="todo" type="text" placeholder="What needs to be done?" maxlength="200" required>
+            <button type="submit" aria-label="Add todo">Add</button>
+        </form>
+
+        <section class="controls" aria-label="Todo controls">
+            <div class="filters" role="radiogroup" aria-label="Filter todos">
+                <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
+                <button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <button id="clear-completed" type="button">Clear completed</button>
+        </section>
+
+        <ul id="todo-list" aria-live="polite" aria-label="Todo items"></ul>
+        <p id="empty-state" class="muted">No todos yet. Add one above!</p>
+    </main>
+
+    <script src="script.js" defer></script>
+    <noscript>Your browser does not support JavaScript or it is disabled.</noscript>
+</body>
+</html>
+
+
